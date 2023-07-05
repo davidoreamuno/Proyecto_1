@@ -24,16 +24,17 @@
     </head>
     <body>
         <!-- Barra de búsqueda -->
-        <div class="row" style="margin-top: 70px;">
-            <div class="col-xs-12 text-right">
-                <form class="navbar-form" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Buscar">
-                    </div>
-                    <button type="submit" class="btn btn-default">Buscar</button>
-                </form>
-            </div>
-        </div>
+<div class="row" style="margin-top: 70px;">
+  <div class="col-xs-12 text-right">
+    <form class="navbar-form" role="search" action="/ruta-de-busqueda" method="GET">
+      <div class="form-group">
+        <input type="text" class="form-control" name="q" placeholder="Buscar">
+      </div>
+      <button type="submit" class="btn btn-default">Buscar</button>
+    </form>
+  </div>
+</div>
+
         <div style="text-align: center;">
             <img src="https://mail.google.com/mail/u/0?ui=2&amp;ik=843302c75b&amp;attid=0.1&amp;permmsgid=msg-f:1770460352914413695&amp;th=1891f04f8860587f&amp;view=fimg&amp;realattid=1891f049fe958fff42f1&amp;disp=thd&amp;attbid=ANGjdJ_E-zudmp0-GfyGzE1utKrkTllTqk2ka9ca-ivR4O0-JN-t-3f5AqVF9zZoUrVmtsLWJ22cV9hOEZH7Kk2YU77lvS_-Ll_INGxBXPARQnq0yaZAlK6MjwJ_ctE&amp;ats=2524608000000&amp;sz=w1325-h618" alt="Descripción de la imagen">
         </div>
@@ -77,11 +78,12 @@
                                             <li class="dropdown-header">Encabezado de navegación</li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html">Blog</a></li>
+                                   <li><a class="nav-menu-link nav-link" href="blog.html">Blog</a></li>
+
                                     <li><a href="#about">Servicios</a></li>
                                     <li><a href="#contact">Contacto</a></li>
                                     <li><a href="carrito.html">Mi Carrito</a></li>
-                                    <li><a href="cuenta.html">Mi Cuenta</a></li>
+                                    <li><a href="Login.html">Mi Cuenta</a></li>
 
 
                             </div>
