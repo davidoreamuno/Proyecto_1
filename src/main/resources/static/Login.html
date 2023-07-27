@@ -1,39 +1,112 @@
 <!DOCTYPE html>
 <html>
+
     <head>
-        <title>Login</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <title>Inicio de sesión y Registro</title>
+        <!-- Enlazar los archivos de Bootstrap -->
+        <meta charset="UTF-8">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <style>body{
                 background-color: black;
             }</style>
     </head>
-    <body>
-   
 
-                                    <div class="container">
-                                        <div class="row justify-content-center mt-5">
-                                            <div class="col-md-6">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h4>Iniciar sesion</h4>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <form action="/ruta-de-inicio-de-sesion" method="POST">
-                                                            <div class="form-group">
-                                                                <label for="username">Usuario:</label>
-                                                                <input type="text" class="form-control" id="username" name="username" required>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="password">Contrasena:</label>
-                                                                <input type="password" class="form-control" id="password" name="password" required>
-                                                            </div>
-                                                            <button type="submit" class="btn btn-primary">Iniciar sesion</button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </body>
-                                    </html>
+    <body style="font-family: Arial, sans-serif; background-color: black; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- Barra de navegación fija -->
+                    <nav class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <!-- Agrega tu logo aquí -->
+                                <a class="navbar-brand" href="Index.html">
+                                    <img src="Images/Black and White Monochrome Tech Logo.jpg" alt=" S&C Tecnología" height="30"/>
+
+                                </a>
+                            </div>
+
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="Catalogo-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catalogo <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="Casa Inteligente.html">Casa Inteligente</a></li>
+                                        <li><a href="Camaras.html">Camaras</a></li>
+                                        <li><a href="Sensores.html">Sensores</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="dropdown-header">Encabezado de navegación</li>
+                                    </ul>
+                                </li>
+                                <li><a class="nav-menu-link nav-link" href="blog.html">Blog</a></li>
+                                <li><a class="nav-menu-link nav-link" href="Servicios.html">Servicios</a></li>
+                                <li><a href="#contact">Contacto</a></li>
+                                <li><a href="MiCarrito.html">Mi Carrito</a></li>
+                                <li><a href="Login.html">Mi Cuenta</a></li>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="container" style="background-color: #ffffff; border-radius: 5px; padding: 20px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                <div class="form">
+                    <h1>Iniciar sesión</h1>
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Contraseña:</label>
+                            <input type="password" id="password" name="password" class="form-control" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                    </form>
+                    <p>¿No tienes una cuenta? <a href="#registro" onclick="mostrarRegistro()">Crear cuenta</a></p>
+                </div>
+
+                <div class="form" id="registro" style="display: none;">
+                    <h1>Crear cuenta</h1>
+                    <form>
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Contraseña:</label>
+                            <input type="password" id="password" name="password" class="form-control" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Crear cuenta</button>
+                    </form>
+                    <p>¿Ya tienes una cuenta? <a href="#inicio" onclick="mostrarInicio()">Iniciar sesión</a></p>
+                </div>
+            </div>
+
+            <script>
+                function mostrarRegistro() {
+                    document.getElementById("registro").style.display = "block";
+                    document.getElementById("inicio").style.display = "none";
+                }
+
+                function mostrarInicio() {
+                    document.getElementById("registro").style.display = "none";
+                    document.getElementById("inicio").style.display = "block";
+                }
+            </script>
+    </body>
+
+</html>
