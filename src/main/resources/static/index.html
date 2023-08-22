@@ -158,6 +158,10 @@
 
                 </div>
             </div>
+            <div class="facebook-iframe" style="margin-top: 50px;">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsctecnologias40%2F&tabs=timeline&width=340&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="600"
+                        style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
             <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
                 <div class="col-xs-12 col-md-6">
                     <form id="suscripcionForm" action="/suscripcion" method="post">
@@ -175,10 +179,10 @@
 
             <script>
                 document.getElementById("suscripcionForm").addEventListener("submit", function(event) {
-                    event.preventDefault(); // Evitar el envío del formulario
+                    event.preventDefault();
 
                     const email = document.getElementById("email").value;
-                    const exito = true; // Cambiar a false para simular error
+                    const exito = true;
                     if (exito) {
                         document.getElementById("mensajeExito").style.display = "block";
                         document.getElementById("mensajeError").style.display = "none";
@@ -189,9 +193,8 @@
                     }
                 });
             </script>
-
-
-
+           
+            
             <!-- jQuery (necesario para los complementos de JavaScript de Bootstrap) -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <!-- Incluye todos los complementos compilados (a continuación), o incluye archivos individuales según sea necesario -->
