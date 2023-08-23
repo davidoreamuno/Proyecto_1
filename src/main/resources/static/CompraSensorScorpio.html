@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+
+<html>
+
+    <link rel="stylesheet" href="estilos.css" type="text/css"/>
+    <link rel="stylesheet" href="estilos.css" type="text/css">
+    <link rel="stylesheet" href="estilos.css" type="text/css"/>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <title>Factura de Sensor Scorpio</title>
+    <head>
+        <title>Inicio de sesión y Registro</title>
+        <!-- Enlazar los archivos de Bootstrap -->
+        <meta charset="UTF-8">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <style>body{
+                background-color: black;
+                color:white;
+                        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border: 2px solid white;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid white;
+        }
+        th {
+            background-color:blue;
+        }
+        .total {
+            font-weight: bold;
+        }
+        h1, h2, p, label {
+            border: none;
+        }
+        input, textarea, button {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+         /* Estilos para el botón */
+        .boton-color {
+            background-color: aqua; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            padding: 10px 20px; /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+            border-radius: 5px; /* Borde redondeado */
+            cursor: pointer; /* Cambiar el cursor al pasar por encima del botón */
+        }
+        /* Cambiar el color del botón cuando se pasa el cursor por encima */
+        .boton-color:hover {
+            background-color:greenyellow/* Nuevo color de fondo al pasar el cursor */
+        }
+        .boton-circulo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+        }
+        .si {
+            background-color: gray;
+        }
+        .no {
+            background-color: gray;
+        }
+        .si.selected {
+            background-color: blue;
+        }
+        .no.selected {
+            background-color: blue;
+        }
+            }</style>
+    </head>
+
+    <body <!-- Barra de búsqueda -->
+        <div class="row" style="margin-top: 70px;">
+            <div class="col-xs-12 text-right">
+                <form class="navbar-form" role="search" action="/ruta-de-busqueda" method="GET">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="q" placeholder="Buscar">
+                    </div>
+                    <button type="submit" class="btn btn-default">Buscar</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div style="text-align: center;">
+            <img src="Images/Black and White Monochrome Tech Logo.jpg" alt=" S&C Tecnología" height="300
+                 "/>
+        </div>
+        <div class="row" style="margin-top: 75px;">
+            <div class="col-xs-12 text-center">
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- Barra de navegación fija -->
+                    <nav class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <!-- logo aquí -->
+                                <a class="navbar-brand" href="index.html">
+                                    <img src="Images/Black and White Monochrome Tech Logo.jpg" alt=" S&C Tecnología" height="30"/>
+
+                                </a>
+                            </div>
+
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="Catalogo-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catalogo <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="Casa Inteligente.html">Casa Inteligente</a></li>
+                                        <li><a href="Camaras.html">Camaras</a></li>
+                                        <li><a href="Sensores.html">Sensores</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="dropdown-header">Encabezado de navegación</li>
+                                    </ul>
+                                </li>
+                                <li><a class="nav-menu-link nav-link" href="blog.html">Blog</a></li>
+                                <li><a class="nav-menu-link nav-link" href="Servicios.html">Servicios</a></li>
+                                <li><a href="Contacto.html">Contacto</a></li>
+                                <li><a href="MiCarrito.html">Mi Carrito</a></li>
+                                <li><a href="Login.html">Mi Cuenta</a></li>
+                                <li><a href="Contacto.html">Contacto</a></li>
+                        </div>
+                    </nav>
+                </div>
+            </div> 
+            <!-- jQuery (necesario para los complementos de JavaScript de Bootstrap) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <!-- Incluye todos los complementos compilados (a continuación), o incluye archivos individuales según sea necesario -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+            <h1>Factura de Sensor Scorpio</h1>
+            <p>Fecha: 11 de agosto de 2023</p>
+            <table>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+                <div></div>
+                <tr>
+                     <td>Sensor Scorpio</td>
+    <td><input type="number" id="cantidad" name="cantidad" min="1" value="1"></td>
+    <td>17000</td>
+    <td>$20.00</td>
+                </tr>
+                
+                <tr>
+                    <td colspan="3" class="total">Total</td>
+                    <td class="total">$35.00</td>
+                </tr>
+            </table>
+            
+            
+               <img src="Images/Screenshot 2023-06-12 221409.jpg" alt=""/>
+            
+            <h1>Pago y envio</h1>
+
+            <form action="procesar_cita.php" method="post">
+                <label for="nombre">Nombre y apellidos </label>
+
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <label for="telefono">Teléfono de Contacto:</label>
+                <input type="tel" id="telefono" name="telefono" required><br><br>
+<h2>¿Su pago es en tarjeta?</h2>
+    <button class="boton-circulo si" onclick="seleccionarRespuesta('si')">Sí</button>
+    <button class="boton-circulo no" onclick="seleccionarRespuesta('no')">No</button>
+    <div></div>
+    <label for="telefono">Si la respuesta anteriro fue si,ingrese su numero de tarjeta:</label>
+                <input type="tel" id="telefono" name="telefono" required><br><br>
+<label for="fecha">Fecha de la entrega:</label>
+                <input type="date" id="fecha" name="fecha" required><br><br>
+                <label for="hora">Hora en la que necesita la entrega:</label>
+                <input type="time" id="hora" name="hora" required><br><br>
+
+                <label for="motivo">Direccion exacta:</label>
+                <textarea id="motivo" name="motivo" rows="4" cols="50" required></textarea><br><br>
+              <button class="boton-color">!COMPRAR!</button>
+           
+            </form>
+    <script>
+        function seleccionarRespuesta(respuesta) {
+            const botones = document.querySelectorAll('.boton-circulo');
+            botones.forEach(boton => {
+                boton.classList.remove('selected');
+            });
+            const botonSeleccionado = document.querySelector('.' + respuesta);
+            botonSeleccionado.classList.add('selected');
+        }
+          </script>
+        </body>
+    
+
+
+</html>
